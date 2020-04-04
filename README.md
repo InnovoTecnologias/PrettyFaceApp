@@ -11,12 +11,15 @@ Home Menu
 <img width="191" height="350" src="./Media/Preview2.jpg" />
 
 Flyout Menu
+
 <img width="191" height="350" src="./Media/Preview3.jpg" />
 
 Pages in Shell
+
 <img width="191" height="350" src="./Media/Preview4.jpg" />
 
 Splash Screen
+
 <img width="191" height="350" src="./Media/Preview5.jpg" />
 
 
@@ -35,19 +38,25 @@ Thanks [Material Design Icons](https://www.materialdesignicons.com/) for the ico
 <b>Photos Credits</b>
 
 <b>Face 1</b>
+
 Photo by [Ayo Ogunseinde](https://unsplash.com/@armedshutter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/pOVy61t9NeA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <b>Face 2</b>
+
 Photo by [Michael Dam](https://unsplash.com/@michaeldam?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <b>Face 3</b>
+
 Photo by [bruce mars](https://unsplash.com/@brucemars?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <b>Face 4</b>
+
 Photo by [Jonathan Borba](https://unsplash.com/@jonathanborba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <b>Face 5</b>
+
 Photo by [Ben White](https://unsplash.com/@benwhitephotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 <b>Face 6</b>
+
 Photo by [Ben White](https://unsplash.com/@benwhitephotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/kid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
