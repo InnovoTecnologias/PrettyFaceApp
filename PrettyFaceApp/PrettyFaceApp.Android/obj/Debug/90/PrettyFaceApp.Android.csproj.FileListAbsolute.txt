@@ -516,3 +516,6 @@ E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj
 E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\res\drawable\face4.jpg
 E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\res\drawable\face5.jpg
 E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\res\drawable\face6.jpg
+E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\res\layout\splashscreen.xml
+E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\android\src\crc646538d80e458efc05\SplashActivity.java
+E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\res\drawable\splash.png

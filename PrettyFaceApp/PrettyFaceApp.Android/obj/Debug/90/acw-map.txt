@@ -1,6 +1,9 @@
 PrettyFaceApp.Droid.MainActivity, PrettyFaceApp.Android;crc646538d80e458efc05.MainActivity
 PrettyFaceApp.Droid.MainActivity;crc646538d80e458efc05.MainActivity
 prettyfaceapp.droid.MainActivity;crc646538d80e458efc05.MainActivity
+PrettyFaceApp.Droid.SplashActivity, PrettyFaceApp.Android;crc646538d80e458efc05.SplashActivity
+PrettyFaceApp.Droid.SplashActivity;crc646538d80e458efc05.SplashActivity
+prettyfaceapp.droid.SplashActivity;crc646538d80e458efc05.SplashActivity
 SkiaSharp.Views.Android.GLTextureView, SkiaSharp.Views.Android;crc648e35430423bd4943.GLTextureView
 SkiaSharp.Views.Android.GLTextureView;crc648e35430423bd4943.GLTextureView
 skiasharp.views.android.GLTextureView;crc648e35430423bd4943.GLTextureView

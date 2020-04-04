@@ -7,14 +7,14 @@
        xmlns:local="clr-namespace:PrettyFaceApp.Views"
        Title="PrettyFaceApp"
        x:Class="PrettyFaceApp.AppShell"
-       FlyoutHeaderBehavior="CollapseOnScroll">
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       FlyoutBackgroundColor="{StaticResource LightPrimary}"
+       Shell.ItemTemplate="{StaticResource MenuOptionsTemplates}"
+       Shell.MenuItemTemplate="{StaticResource MenuOptionsTemplates}">
 
-    <!-- 
-        Styles and Resources 
-    -->
+    <!-- Styles and Resources -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Color x:Key="NavigationPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationPrimary}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
@@ -26,48 +26,75 @@
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
-            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style x:Key="TabBarStyle" TargetType="Element">
+
+                <Setter Property="Shell.ForegroundColor" Value="White" />
+                <Setter Property="Shell.TitleColor" Value="White" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="White"/>
+            </Style>
+
+            <Style TargetType="ShellItem" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="TabBar" BasedOn="{StaticResource TabBarStyle}" />
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!-- Your Pages -->
-    <!--<TabBar>
-        <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
-    </TabBar>-->
-
-    
-
-
+    <!--Header Template-->
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid HeightRequest="175">
-                <Image Source="Face1.jpg" Aspect="AspectFill" />
-                <Label Text="Pretty Face App" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" VerticalOptions="Start" TextColor="White" Padding="0,10,10,0"/>
-            </Grid>
+            <StackLayout Padding="0,0,0,20" BackgroundColor="{StaticResource LightPrimary}">
+                <Grid HeightRequest="175">
+                    <Image Source="Face1.jpg" Aspect="AspectFill" />
+                    <Label Text="Pretty Face App" HorizontalOptions="End" FontAttributes="Bold" FontSize="14" VerticalOptions="Start" TextColor="White" Padding="0,10,10,0"/>
+                </Grid>
+            </StackLayout>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
-    
-    <!--<Shell.MenuItems>
-        <MenuItem Command="{Binding ProductTypeCommand}"
-                  CommandParameter="1"
-                  Text="Item 1" />
-        <MenuItem Command="{Binding ProductTypeCommand}"
-                  CommandParameter="2"
-                  Text="Item 2" />
-    </Shell.MenuItems>-->
 
-    <ShellItem Title="About">
-        <ShellSection Title="About This App">
-            <ShellContent Title="About This App" >
+    <!--Options in Flyout Menu-->
+    <ShellItem Title="Browse" >
+        <ShellItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource MaterialFontFamily}"
+                Glyph="󰥧"
+                Size="25"
+                Color="Black" />
+        </ShellItem.Icon>
+        <Tab Title="Top Tabs" Route="toptabs" Icon="tab_feed.png">
+            <ShellContent Title="First" ContentTemplate="{DataTemplate local:ItemsPage}" Route="first" />
+            <ShellContent Title="Second" ContentTemplate="{DataTemplate local:AboutPage}" Route="second" />
+        </Tab>
+        <Tab Title="About" Route="item_details" Icon="tab_about.png">
+            <ShellContent Title="This App" ContentTemplate="{DataTemplate local:AboutPage}" Route="this_app" />
+        </Tab>
+    </ShellItem>
+
+    <MenuItem Text="Home Page" Clicked="HomePageMenuItem_Clicked" >
+        <MenuItem.IconImageSource>
+                <FontImageSource
+                FontFamily="{StaticResource MaterialFontFamily}"
+                Glyph="󰛇"
+                Size="27"
+                Color="Black" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
+
+    <ShellItem Title="About This App" x:Name="browse">
+        <ShellItem.Icon>
+            <FontImageSource
+                FontFamily="{StaticResource MaterialFontFamily}"
+                Glyph="󰣐"
+                Size="30"
+                Color="Black" />
+        </ShellItem.Icon>
+        <ShellSection Title="About">
+            <ShellContent Title="About" >
                 <local:AboutPage />
             </ShellContent>
         </ShellSection>
     </ShellItem>
-    <MenuItem Text="Home Page" Clicked="HomePageMenuItem_Clicked" />
-
 </Shell>

@@ -19,7 +19,9 @@ android.support.v7.widget.Toolbar;E:\MyDocumentos2\Software2\PrettyFaceApp\Prett
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
+bitmap;obj\Debug\90\res\layout\splashscreen.xml
 cache-path;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Debug\90\res\layout\splashscreen.xml
 color;obj\Debug\90\res\values\colors.xml
 external-cache-path;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -27,8 +29,11 @@ foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\layout\bottomtablayout.xml
 item;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\values\styles.xml
+item;obj\Debug\90\res\layout\splashscreen.xml
 item;obj\Debug\90\res\values\styles.xml
+layer-list;obj\Debug\90\res\layout\splashscreen.xml
 LinearLayout;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\layout\bottomtablayout.xml
+LinearLayout;obj\Debug\90\res\layout\splashscreen.xml
 paths;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 resources;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
@@ -39,6 +44,8 @@ set;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android
 set;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\anim\exittoright.xml
 style;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
+text;obj\Debug\90\res\layout\splashscreen.xml
+TextView;obj\Debug\90\res\layout\splashscreen.xml
 translate;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\anim\enterfromleft.xml
 translate;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\anim\enterfromright.xml
 translate;E:\MyDocumentos2\Software2\PrettyFaceApp\PrettyFaceApp\PrettyFaceApp.Android\obj\Debug\90\lp\43\jl\res\anim\exittoleft.xml

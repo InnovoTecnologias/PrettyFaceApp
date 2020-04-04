@@ -164,4 +164,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Face6.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Splash.png" />
+  </ItemGroup>
 </Project>

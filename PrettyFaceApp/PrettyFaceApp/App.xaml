@@ -6,11 +6,47 @@
              mc:Ignorable="d"
              x:Class="PrettyFaceApp.App">
     <Application.Resources>
-        <ResourceDictionary>
+        <ResourceDictionary>            
+            <!--Colors-->
+            <Color x:Key="NavigationPrimary">#D0082E</Color>
+            <Color x:Key="LightPrimary">#FBB3BF</Color>
+            <Color x:Key="SelectedPrimary">#E3A2AD</Color>
+            <Color x:Key="DarkPrimary">#88111B</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            
+            <!--Icons Font-->
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
                 <On Platform="iOS" Value="Material Design Icons" />
                 <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
             </OnPlatform>
+
+            <!--Template and Style for Flyout Menu Items-->
+            <DataTemplate x:Key="MenuOptionsTemplates">
+                <Grid Padding="0,17,0,17" Style="{StaticResource MenuOptionsStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.2*" />
+                        <ColumnDefinition Width="0.8*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding FlyoutIcon}" Margin="0" />
+                    <Label Grid.Column="1" Text="{Binding Title}" TextColor="Black" FontAttributes="Bold" FontSize="15" VerticalTextAlignment="Center" />
+                </Grid>
+            </DataTemplate>
+
+            <!--This is useful to have the selected menu item background color different from others-->
+            <Style x:Key="MenuOptionsStyle" TargetType="Grid">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource SelectedPrimary}"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -19,17 +19,6 @@
                                 <magic:GradientStop Color="#FCFCFC" Offset="0" />
                                 <magic:GradientStop Color="#EEEEEE" Offset="1" />
                             </magic:RadialGradient>
-                            <!--<magic:RadialGradient Center="0.5,0.5" Shape="Circle" Size="ClosestSide">
-                                <magic:GradientStop Color="#EEB9D3" Offset="0" />
-                                <magic:GradientStop Color="#C48AE6" Offset="0.5" />
-                                <magic:GradientStop Color="#A163F5" Offset="1" />
-                            </magic:RadialGradient>-->
-                            <!--<magic:LinearGradient Angle="45">
-                                <magic:GradientStop Color="#14DEDEDE" Offset="0" />
-                                <magic:GradientStop Color="#14DEDEDE" Offset="0.5" />
-                                <magic:GradientStop Color="#14000000" Offset="0.5" />
-                                <magic:GradientStop Color="#14000000" Offset="1" />
-                            </magic:LinearGradient>-->
                         </magic:GradientCollection>
                     </magic:GradientView.GradientSource>
                 </magic:GradientView>
@@ -39,7 +28,7 @@
                     <!--First Section-->
                     <StackLayout>
                         <Grid>
-                            <p:PancakeView BackgroundColor="#D0082E" Margin="3,0,3,90" CornerRadius="0,0,30,30" HorizontalOptions="FillAndExpand" HeightRequest="150"/>
+                            <p:PancakeView BackgroundColor="{StaticResource NavigationPrimary}" Margin="3,0,3,90" CornerRadius="0,0,30,30" HorizontalOptions="FillAndExpand" HeightRequest="150"/>
                             <Label Text="Pretty Face App" FontAttributes="Bold" TextColor="White" Margin="15,10,0,0" HorizontalOptions="StartAndExpand"/>
                             <Label Text="v. 1.0" TextColor="White" Margin="0,10,15,0" HorizontalOptions="EndAndExpand"/>
                             <p:PancakeView BackgroundColor="#2195F2" Margin="40,50,40,0" CornerRadius="25,25,25,25" BorderColor="White" BorderThickness="4" HeightRequest="100" HorizontalOptions="FillAndExpand">
@@ -95,7 +84,7 @@
 
                             <!--Lateral Menu 1-->
                             <StackLayout Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
-                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="Start" Padding="0,0,5,0">
+                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="{StaticResource DarkPrimary}" HorizontalOptions="Start" Padding="0,0,5,0">
                                     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                         <Image HorizontalOptions="Start">
                                             <Image.Source>
@@ -116,7 +105,7 @@
 
                             <!--Lateral Menu 2-->
                             <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
-                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="Start" Padding="0,0,5,0">
+                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="{StaticResource DarkPrimary}" HorizontalOptions="Start" Padding="0,0,5,0">
                                     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                         <Image HorizontalOptions="Start">
                                             <Image.Source>
@@ -137,7 +126,7 @@
 
                             <!--Lateral menu 3-->
                             <StackLayout Grid.Column="2" Grid.Row="0" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
-                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="End" Padding="5,0,0,0">
+                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="{StaticResource DarkPrimary}" HorizontalOptions="End" Padding="5,0,0,0">
                                     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                         <Image HorizontalOptions="Start">
                                             <Image.Source>
@@ -158,7 +147,7 @@
 
                             <!--Lateral menu 4-->
                             <StackLayout Grid.Column="2" Grid.Row="1" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
-                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="End" Padding="5,0,0,0">
+                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="{StaticResource DarkPrimary}" HorizontalOptions="End" Padding="5,0,0,0">
                                         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                             <Image HorizontalOptions="Center">
                                                 <Image.Source>
@@ -199,7 +188,7 @@
                 </StackLayout>
 
                 <!--Bottom Menu-->
-                <p:PancakeView TranslationY="350" Margin="0,0,0,0" x:Name="pancakeViewMenu" BackgroundColor="#D0082E" CornerRadius="20,20,0,0" HeightRequest="385" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
+                <p:PancakeView TranslationY="350" Margin="0,0,0,0" x:Name="pancakeViewMenu" BackgroundColor="{StaticResource NavigationPrimary}" CornerRadius="20,20,0,0" HeightRequest="385" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
                     <p:PancakeView.GestureRecognizers>
                         <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ShowOrHideMenu"/>
                         <SwipeGestureRecognizer Direction="Down" Swiped="ShowOrHideMenu"/>
