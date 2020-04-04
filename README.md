@@ -1,7 +1,15 @@
 # PrettyFaceApp
-Beautiful Apps in Xamarin
+Beautiful Apps in Xamarin: Pretty Face App
 
-Thanks materialdesignicons.com for the icons font and unsplash.com for the photos.
+
+![GIF](./Media/PrettyFaceApp.gif)
+
+
+
+
+Thanks [Material Design Icons](https://www.materialdesignicons.com/) for the icons font and [UnSplash](https://www.unsplash.com/) for the photos.
+
+<img width="382" height="700" src="./Media/Preview1.png" />
 
 Face 1
 Photo by Ayo Ogunseinde on Unsplash
