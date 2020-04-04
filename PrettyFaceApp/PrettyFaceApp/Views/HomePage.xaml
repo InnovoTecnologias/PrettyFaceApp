@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:p="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="PrettyFaceApp.Views.HomePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+
+                <!--Gradient background-->
+                <magic:GradientView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <magic:GradientView.GradientSource>
+                        <magic:GradientCollection>
+                            <magic:RadialGradient Center="0.5,0.16" Shape="Circle">
+                                <magic:GradientStop Color="#FCFCFC" Offset="0" />
+                                <magic:GradientStop Color="#EEEEEE" Offset="1" />
+                            </magic:RadialGradient>
+                            <!--<magic:RadialGradient Center="0.5,0.5" Shape="Circle" Size="ClosestSide">
+                                <magic:GradientStop Color="#EEB9D3" Offset="0" />
+                                <magic:GradientStop Color="#C48AE6" Offset="0.5" />
+                                <magic:GradientStop Color="#A163F5" Offset="1" />
+                            </magic:RadialGradient>-->
+                            <!--<magic:LinearGradient Angle="45">
+                                <magic:GradientStop Color="#14DEDEDE" Offset="0" />
+                                <magic:GradientStop Color="#14DEDEDE" Offset="0.5" />
+                                <magic:GradientStop Color="#14000000" Offset="0.5" />
+                                <magic:GradientStop Color="#14000000" Offset="1" />
+                            </magic:LinearGradient>-->
+                        </magic:GradientCollection>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+
+                <StackLayout x:Name="stackLayout1">
+
+                    <!--First Section-->
+                    <StackLayout>
+                        <Grid>
+                            <p:PancakeView BackgroundColor="#D0082E" Margin="3,0,3,90" CornerRadius="0,0,30,30" HorizontalOptions="FillAndExpand" HeightRequest="150"/>
+                            <Label Text="Pretty Face App" FontAttributes="Bold" TextColor="White" Margin="15,10,0,0" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="v. 1.0" TextColor="White" Margin="0,10,15,0" HorizontalOptions="EndAndExpand"/>
+                            <p:PancakeView BackgroundColor="#2195F2" Margin="40,50,40,0" CornerRadius="25,25,25,25" BorderColor="White" BorderThickness="4" HeightRequest="100" HorizontalOptions="FillAndExpand">
+                                <StackLayout>
+                                    <CarouselView x:Name="carouselView1" IndicatorView="indicator1" ItemsSource="{Binding Faces}">
+                                        <CarouselView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                                    <Image Source="{Binding ImageUrl}"/>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </CarouselView.ItemTemplate>
+                                    </CarouselView>
+                                </StackLayout>
+                            </p:PancakeView>
+                        </Grid>
+                        <IndicatorView x:Name ="indicator1" IndicatorColor="LightGray" VerticalOptions="Start" SelectedIndicatorColor="Black" IndicatorSize="10" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    
+                    <!--Middle Section-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Some faces" HorizontalOptions="Start" VerticalOptions="Center" FontSize="20" Margin="20,10,20,0" />
+                        <Label Text="See more" HorizontalOptions="EndAndExpand" VerticalOptions="Center" TextColor="Black" FontSize="12" Margin="20,20,20,0" />
+                    </StackLayout>
+                    <CollectionView ItemsLayout="HorizontalList" Margin="10,0,10,0" ItemSizingStrategy="MeasureFirstItem" ItemsSource="{Binding Faces}" HeightRequest="100">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="10,0,10,0">
+                                    <p:PancakeView HeightRequest="80" HasShadow="True" WidthRequest="80" CornerRadius="30">
+                                        <Image Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+                                    </p:PancakeView>
+                                    <StackLayout Spacing="0" VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+                                        <Label FontSize="16" Text="{Binding Title}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    
+                    <!--Last Section-->
+                    <Grid VerticalOptions="End" Margin="0,0,0,10">
+
+                        <Grid HorizontalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="55"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="55"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                            </Grid.RowDefinitions>
+
+                            <!--Lateral Menu 1-->
+                            <StackLayout Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
+                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="Start" Padding="0,0,5,0">
+                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Image HorizontalOptions="Start">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                                        Glyph="󰙉"
+                                                        Size="30"
+                                                        Color="White" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label Text="Women" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </p:PancakeView>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LateralMenu1_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                            <!--Lateral Menu 2-->
+                            <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
+                                <p:PancakeView HasShadow="True" CornerRadius="0,10,0,10" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="Start" Padding="0,0,5,0">
+                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Image HorizontalOptions="Start">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                                        Glyph="󰹼"
+                                                        Size="30"
+                                                        Color="White" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label Text="Babies" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </p:PancakeView>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LateralMenu2_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                            <!--Lateral menu 3-->
+                            <StackLayout Grid.Column="2" Grid.Row="0" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
+                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="End" Padding="5,0,0,0">
+                                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                        <Image HorizontalOptions="Start">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                                        Glyph="󰍜"
+                                                        Size="30"
+                                                        Color="White" />
+                                            </Image.Source>
+                                        </Image>
+                                        <Label Text="Shell" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </p:PancakeView>
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LateralMenu3_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+
+                            <!--Lateral menu 4-->
+                            <StackLayout Grid.Column="2" Grid.Row="1" VerticalOptions="FillAndExpand" Padding="0,10,0,10">
+                                <p:PancakeView HasShadow="True" CornerRadius="10,0,10,0" HeightRequest="100" WidthRequest="50" VerticalOptions="Center" BackgroundColor="#88111B" HorizontalOptions="End" Padding="5,0,0,0">
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Image HorizontalOptions="Center">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                                        Glyph="󰙌"
+                                                        Size="30"
+                                                        Color="White" />
+                                                </Image.Source>
+                                            </Image>
+                                        <Label Text="Kids" FontSize="10" TextColor="White" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                </p:PancakeView>
+                                <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="LateralMenu4_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </Grid>
+
+                        <!--Last Carousel-->
+                        <CollectionView Margin="50,10,50,0" ItemsLayout="VerticalList" ItemSizingStrategy="MeasureFirstItem" ItemsSource="{Binding FacesInverted}" VerticalOptions="Start" HeightRequest="186">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout Padding="10">
+                                        <p:PancakeView HeightRequest="76" WidthRequest="230" HorizontalOptions="Center" CornerRadius="12">
+                                                <Grid>
+                                                    <Image Aspect="AspectFill"  Source="{Binding ImageUrl}" />
+                                                    <StackLayout Spacing="0" VerticalOptions="End" HorizontalOptions="FillAndExpand" BackgroundColor="#88111B" Opacity=".85" Padding="0,2,0,3">
+                                                        <Label FontSize="16" TextColor="#fff" Text="{Binding Title}" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                                    </StackLayout>
+                                                </Grid>
+                                        </p:PancakeView>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </StackLayout>
+
+                <!--Bottom Menu-->
+                <p:PancakeView TranslationY="350" Margin="0,0,0,0" x:Name="pancakeViewMenu" BackgroundColor="#D0082E" CornerRadius="20,20,0,0" HeightRequest="385" HorizontalOptions="FillAndExpand" VerticalOptions="End" >
+                    <p:PancakeView.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="ShowOrHideMenu"/>
+                        <SwipeGestureRecognizer Direction="Down" Swiped="ShowOrHideMenu"/>
+                    </p:PancakeView.GestureRecognizers>
+                    <StackLayout>
+                        
+                        <!--Menu Title-->
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start">
+                            <Label Text="Menu" FontSize="Large" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,5,0,0"/>
+                            <ImageButton BackgroundColor="Transparent" Padding="0,7,0,0" VerticalOptions="CenterAndExpand" IsVisible="{Binding MenuInvisible}">
+                                <ImageButton.Source>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰜷"
+                                        Size="25"
+                                        Color="White" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                        </StackLayout>
+                        <Grid Margin="30,30,30,10" ColumnSpacing="20" RowSpacing="20">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition  Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--Menu Buttons-->
+                            <Button BackgroundColor="White" Grid.Row="0" Grid.Column="0" Text="Photos" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰄀"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+                            <Button BackgroundColor="White" Grid.Row="0" Grid.Column="1" Text="Studio" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰥟"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+                            <Button BackgroundColor="White" Grid.Row="1" Grid.Column="0" Text="Search" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰥷"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+
+                            <Button BackgroundColor="White" Grid.Row="1" Grid.Column="1" Text="Website" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰖟"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+
+                            <Button BackgroundColor="White" Grid.Row="2" Grid.Column="0" Text="Our Location" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰍒"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+
+                            <Button BackgroundColor="White" Grid.Row="2" Grid.Column="1" Text="Contact" TextColor="Black" ContentLayout="Top,0" HeightRequest="80">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="󰇮"
+                                        Size="44"
+                                        Color="Black" />
+                                </Button.ImageSource>
+                            </Button>
+                        </Grid>
+                    </StackLayout>
+                </p:PancakeView>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
