@@ -36,6 +36,9 @@ AppShell.xaml contains some samples of items in the Flyout menu so you can perso
 <a href="https://snppts.dev/author/InnovoTecnologias"><img src="https://www.snppts.dev/img/snppts-badge.jpg" /></a>
 
 
+Let me recommend you this wonderful NuGet: [SimpleBottomDrawer](https://github.com/galadril/Xam.Plugin.SimpleBottomDrawer) to build the bottom menu.
+
+
 Thanks [Material Design Icons](https://www.materialdesignicons.com/) for the icons font and [UnSplash](https://www.unsplash.com/) for the photos.
 
 <b>Photos Credits</b>
