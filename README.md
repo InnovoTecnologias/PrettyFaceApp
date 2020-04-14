@@ -33,6 +33,9 @@ In the App.xaml.cs the constructor is modified to start the app with the Home Pa
 
 AppShell.xaml contains some samples of items in the Flyout menu so you can personalize them as you want (upper and bottom tabs, no tabs...).
 
+<a href="https://snppts.dev/author/InnovoTecnologias"><img src="https://www.snppts.dev/img/snppts-badge.jpg" /></a>
+
+
 Thanks [Material Design Icons](https://www.materialdesignicons.com/) for the icons font and [UnSplash](https://www.unsplash.com/) for the photos.
 
 <b>Photos Credits</b>
